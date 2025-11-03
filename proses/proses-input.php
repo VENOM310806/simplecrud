@@ -1,22 +1,22 @@
 <?php
 
-// Memasukkan file class-mahasiswa.php untuk mengakses class Mahasiswa
+// Memasukkan file class-nasabah.php untuk mengakses class Nasabah
 include '../config/class-mahasiswa.php';
-// Membuat objek dari class Mahasiswa
-$mahasiswa = new Mahasiswa();
-// Mengambil data mahasiswa dari form input menggunakan metode POST dan menyimpannya dalam array
-$dataMahasiswa = [
-    'nim' => $_POST['nim'],
-    'nama' => $_POST['nama'],
-    'prodi' => $_POST['prodi'],
-    'alamat' => $_POST['alamat'],
+// Membuat objek dari class Nasabah
+$nasabah = new Nasabah();
+// Mengambil data nasabah dari form input menggunakan metode POST dan menyimpannya dalam array
+$dataNasabah = [
+    'norek'    => $_POST['norek'],
+    'nama'     => $_POST['nama'],
+    'bank'     => $_POST['bank'],
+    'alamat'   => $_POST['alamat'],
     'provinsi' => $_POST['provinsi'],
-    'email' => $_POST['email'],
-    'telp' => $_POST['telp'],
-    'status' => $_POST['status']
+    'email'    => $_POST['email'],
+    'telp'     => $_POST['telp'],
+    'status'   => $_POST['status']
 ];
-// Memanggil method inputMahasiswa untuk memasukkan data mahasiswa dengan parameter array $dataMahasiswa
-$input = $mahasiswa->inputMahasiswa($dataMahasiswa);
+// Memanggil method inputNasabah untuk memasukkan data nasabah dengan parameter array $dataNasabah
+$input = $nasabah->inputNasabah($dataNasabah);
 // Mengecek apakah proses input berhasil atau tidak - true/false
 if($input){
     // Jika berhasil, redirect ke halaman data-list.php dengan status inputsuccess

@@ -5,47 +5,47 @@ include '../config/class-master.php';
 // Membuat objek dari class MasterData
 $master = new MasterData();
 // Mengecek aksi yang dilakukan berdasarkan parameter GET 'aksi'
-if($_GET['aksi'] == 'inputprodi'){
-    // Mengambil data prodi dari form input menggunakan metode POST dan menyimpannya dalam array
-    $dataProdi = [
+if($_GET['aksi'] == 'inputbank'){
+    // Mengambil data bank dari form input menggunakan metode POST dan menyimpannya dalam array
+    $dataBank = [
         'kode' => $_POST['kode'],
         'nama' => $_POST['nama']
     ];
-    // Memanggil method inputProdi untuk memasukkan data prodi dengan parameter array $dataProdi
-    $input = $master->inputProdi($dataProdi);
+    // Memanggil method inputBank untuk memasukkan data bank dengan parameter array $dataBank
+    $input = $master->inputBank($databank);
     if($input){
-        // Jika berhasil, redirect ke halaman master-prodi-list.php dengan status inputsuccess
+        // Jika berhasil, redirect ke halaman master-bank-list.php dengan status inputsuccess
         header("Location: ../master-prodi-list.php?status=inputsuccess");
     } else {
-        // Jika gagal, redirect ke halaman master-prodi-input.php dengan status failed
+        // Jika gagal, redirect ke halaman master-bank-input.php dengan status failed
         header("Location: ../master-prodi-input.php?status=failed");
     }
-} elseif($_GET['aksi'] == 'updateprodi'){
-    // Mengambil data prodi dari form edit menggunakan metode POST dan menyimpannya dalam array
-    $dataProdi = [
-        'id' => $_POST['id'],
+} elseif($_GET['aksi'] == 'updatebank'){
+    // Mengambil data bank dari form edit menggunakan metode POST dan menyimpannya dalam array
+    $dataBank = [
+        'id'   => $_POST['id'],
         'kode' => $_POST['kode'],
         'nama' => $_POST['nama']
     ];
-    // Memanggil method updateProdi untuk mengupdate data prodi dengan parameter array $dataProdi
-    $update = $master->updateProdi($dataProdi);
+    // Memanggil method updateBank untuk mengupdate data bank dengan parameter array $dataBank
+    $update = $master->updateBank($dataBank);
     if($update){
-        // Jika berhasil, redirect ke halaman master-prodi-list.php dengan status editsuccess
+        // Jika berhasil, redirect ke halaman master-bank-list.php dengan status editsuccess
         header("Location: ../master-prodi-list.php?status=editsuccess");
     } else {
-        // Jika gagal, redirect ke halaman master-prodi-edit.php dengan status failed dan membawa id prodi
-        header("Location: ../master-prodi-edit.php?id=".$dataProdi['id']."&status=failed");
+        // Jika gagal, redirect ke halaman master-bank-edit.php dengan status failed dan membawa id bank
+        header("Location: ../master-prodi-edit.php?id=".$dataBank['id']."&status=failed");
     }
-} elseif($_GET['aksi'] == 'deleteprodi'){
-    // Mengambil id prodi dari parameter GET
+} elseif($_GET['aksi'] == 'deletebank'){
+    // Mengambil id bank dari parameter GET
     $id = $_GET['id'];
-    // Memanggil method deleteProdi untuk menghapus data prodi berdasarkan id
-    $delete = $master->deleteProdi($id);
+    // Memanggil method deletebank untuk menghapus data bank berdasarkan id
+    $delete = $master->deleteBank($id);
     if($delete){
-        // Jika berhasil, redirect ke halaman master-prodi-list.php dengan status deletesuccess
+        // Jika berhasil, redirect ke halaman master-bank-list.php dengan status deletesuccess
         header("Location: ../master-prodi-list.php?status=deletesuccess");
     } else {
-        // Jika gagal, redirect ke halaman master-prodi-list.php dengan status deletefailed
+        // Jika gagal, redirect ke halaman master-bank-list.php dengan status delete failed
         header("Location: ../master-prodi-list.php?status=deletefailed");
     }
 }

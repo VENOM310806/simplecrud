@@ -1,0 +1,104 @@
+-- tb_jenis_bank --
+/*01*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BI','Bank Indonesia');
+/*02*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('MNDR','Bank Mandiri');
+/*03*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BNI','Bank Negara Indonesia');
+/*04*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BRI','Bank Rakyat Indonesia');
+/*05*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BTN','Bank Tabungan Negara');
+/*06*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BCA','Bank Central Asia');
+/*07*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BSI','Bank Syariah Indonesia');
+/*08*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BJI','Bank Jago Indonesia');
+/*09*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BPD','Bank Pembangunan Daerah');
+
+-- tb_provinsi --
+/*01*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Jakarta',1);
+/*02*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Jawa Barat',2);
+/*03*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Jawa Tengah',3);
+/*04*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Jawa Timur',4);
+/*05*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Nusa Tenggara Timur',5);
+/*06*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Bali',6);
+-- Delete --
+/*01*/
+-- tb_jenis_bank --
+/*01*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BI','Bank Indonesia');
+/*02*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('MNDR','Bank Mandiri');
+/*03*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BNI','Bank Negara Indonesia');
+/*04*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BRI','Bank Rakyat Indonesia');
+/*05*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BTN','Bank Tabungan Negara');
+/*06*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BCA','Bank Central Asia');
+/*07*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BSI','Bank Syariah Indonesia');
+/*08*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BJI','Bank Jago Indonesia');
+/*09*/
+INSERT INTO db_nasabah.tb_jenis_bank (kode_bank,nm_bank)
+VALUE ('BPD','Bank Pembangunan Daerah');
+-- Delete --
+/*01*/
+DELETE FROM db_nasabah.tb_jenis_bank;
+
+-- tb_provinsi --
+/*01*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Jakarta',1);
+/*02*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Jawa Barat',2);
+/*03*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Jawa Tengah',3);
+/*04*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Jawa Timur',4);
+/*05*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Nusa Tenggara Timur',5);
+/*06*/
+INSERT INTO db_nasabah.tb_provinsi (nm_provinsi,id_provinsi)
+VALUE ('Bali',6);
+-- Delete --
+/*01*/
+DELETE FROM db_nasabah.tb_provinsi;

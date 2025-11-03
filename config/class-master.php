@@ -5,20 +5,20 @@ include_once 'db-config.php';
 
 class MasterData extends Database {
 
-    // Method untuk mendapatkan daftar program studi
-    public function getProdi(){
-        $query = "SELECT * FROM tb_prodi";
+    // Method untuk mendapatkan daftar jenis bank
+    public function getBank(){
+        $query = "SELECT * FROM tb_jenis_bank";
         $result = $this->conn->query($query);
-        $prodi = [];
+        $bank = [];
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
-                $prodi[] = [
-                    'id' => $row['kode_prodi'],
-                    'nama' => $row['nama_prodi']
+                $bank[] = [
+                    'id' => $row['kode_bank'],
+                    'nama' => $row['nm_bank']
                 ];
             }
         }
-        return $prodi;
+        return $bank;
     }
 
     // Method untuk mendapatkan daftar provinsi
@@ -30,14 +30,14 @@ class MasterData extends Database {
             while($row = $result->fetch_assoc()) {
                 $provinsi[] = [
                     'id' => $row['id_provinsi'],
-                    'nama' => $row['nama_provinsi']
+                    'nama' => $row['nm_provinsi']
                 ];
             }
         }
         return $provinsi;
     }
 
-    // Method untuk mendapatkan daftar status mahasiswa menggunakan array statis
+    // Method untuk mendapatkan daftar status nasabah menggunakan array statis
     public function getStatus(){
         return [
             ['id' => 1, 'nama' => 'Aktif'],
@@ -47,24 +47,24 @@ class MasterData extends Database {
         ];
     }
 
-    // Method untuk input data program studi
-    public function inputProdi($data){
-        $kodeProdi = $data['kode'];
-        $namaProdi = $data['nama'];
-        $query = "INSERT INTO tb_prodi (kode_prodi, nama_prodi) VALUES (?, ?)";
+    // Method untuk input data jenis bank
+    public function inputBank($data){
+        $kodeBank = $data['kode'];
+        $namaBank = $data['nama'];
+        $query = "INSERT INTO tb_jenis_bank (kode_bank, nm_bank) VALUES (?, ?)";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
         }
-        $stmt->bind_param("ss", $kodeProdi, $namaProdi);
+        $stmt->bind_param("ss", $kodeBank, $namaBank);
         $result = $stmt->execute();
         $stmt->close();
         return $result;
     }
 
-    // Method untuk mendapatkan data program studi berdasarkan kode
-    public function getUpdateProdi($id){
-        $query = "SELECT * FROM tb_prodi WHERE kode_prodi = ?";
+    // Method untuk mendapatkan data bank berdasarkan kode
+    public function getUpdateBank($id){
+        $query = "SELECT * FROM tb_jenis_bank WHERE kode_bank = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
@@ -72,36 +72,36 @@ class MasterData extends Database {
         $stmt->bind_param("s", $id);
         $stmt->execute();
         $result = $stmt->get_result();
-        $prodi = null;
+        $bank = null;
         if($result->num_rows > 0){
             $row = $result->fetch_assoc();
-            $prodi = [
-                'id' => $row['kode_prodi'],
-                'nama' => $row['nama_prodi']
+            $bank = [
+                'id'   => $row['kode_bank'],
+                'nama' => $row['nm_bank']
             ];
         }
         $stmt->close();
-        return $prodi;
+        return $bank;
     }
 
-    // Method untuk mengedit data program studi
-    public function updateProdi($data){
-        $kodeProdi = $data['kode'];
-        $namaProdi = $data['nama'];
-        $query = "UPDATE tb_prodi SET nama_prodi = ? WHERE kode_prodi = ?";
+    // Method untuk mengedit data jenis bank
+    public function updateBank($data){
+        $kodeBank = $data['kode'];
+        $namaBank = $data['nama'];
+        $query = "UPDATE tb_jenis_bank SET kode_bank = ? WHERE nm_bank = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
         }
-        $stmt->bind_param("ss", $namaProdi, $kodeProdi);
+        $stmt->bind_param("ss", $namaBank, $kodeBank);
         $result = $stmt->execute();
         $stmt->close();
         return $result;
     }
 
-    // Method untuk menghapus data program studi
-    public function deleteProdi($id){
-        $query = "DELETE FROM tb_prodi WHERE kode_prodi = ?";
+    // Method untuk menghapus data jenis bank
+    public function deleteBank($id){
+        $query = "DELETE FROM tb_jenis_bank WHERE kode_bank = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
@@ -115,7 +115,7 @@ class MasterData extends Database {
     // Method untuk input data provinsi
     public function inputProvinsi($data){
         $namaProvinsi = $data['nama'];
-        $query = "INSERT INTO tb_provinsi (nama_provinsi) VALUES (?)";
+        $query = "INSERT INTO tb_provinsi (nm_provinsi) VALUES (?)";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
@@ -141,7 +141,7 @@ class MasterData extends Database {
             $row = $result->fetch_assoc();
             $provinsi = [
                 'id' => $row['id_provinsi'],
-                'nama' => $row['nama_provinsi']
+                'nama' => $row['nm_provinsi']
             ];
         }
         $stmt->close();
@@ -152,7 +152,7 @@ class MasterData extends Database {
     public function updateProvinsi($data){
         $idProvinsi = $data['id'];
         $namaProvinsi = $data['nama'];
-        $query = "UPDATE tb_provinsi SET nama_provinsi = ? WHERE id_provinsi = ?";
+        $query = "UPDATE tb_provinsi SET nm_provinsi = ? WHERE id_provinsi = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;

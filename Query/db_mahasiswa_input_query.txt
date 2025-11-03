@@ -1,0 +1,48 @@
+-- tb_prodi --
+/*01*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('ARS','Arsitek');
+/*02*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('BD','Bisnis Digital');
+/*03*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('DI','Desain Interior');
+/*04*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('DKV','Desain Komunikasi Visual');
+/*05*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('DM','Desain Mode');
+/*06*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('MBD','Magister Bisnis Digital');
+/*07*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('MDS','Magister Desain');
+/*08*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('MR','Manajemen Ritel');
+/*09*/
+INSERT INTO db_mahasiswa.tb_prodi (kode_prodi,nm_prodi)
+VALUES ('STI','Sistem Teknologi Informasi');
+
+-- tb_provinsi --
+/*01*/
+INSERT INTO db_mahasiswa.tb_provinsi (nm_provinsi,id_provinsi)
+VALUES ('Bali',1);
+/*02*/
+INSERT INTO db_mahasiswa.tb_provinsi (nm_provinsi,id_provinsi)
+VALUES ('Nusa Tenggara Timur',2);
+/*03*/
+INSERT INTO db_mahasiswa.tb_provinsi (nm_provinsi,id_provinsi)
+VALUES ('Nusa Tenggara Barat',3);
+/*04*/
+INSERT INTO db_mahasiswa.tb_provinsi (nm_provinsi,id_provinsi)
+VALUES ('Jawa Timur',4);
+/*05*/
+INSERT INTO db_mahasiswa.tb_provinsi (nm_provinsi,id_provinsi)
+VALUES ('Jawa Tengah',5);
+/*06*/
+INSERT INTO db_mahasiswa.tb_provinsi (nm_provinsi,id_provinsi)
+VALUES ('Jawa Barat',6);
