@@ -3,7 +3,6 @@
 // Memasukkan file konfigurasi database
 include_once 'db-config.php';
 
-class Mahasiswa extends Database {
 class Nasabah extends Database {
 
     // Method untuk input data mahasiswa
