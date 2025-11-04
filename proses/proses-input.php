@@ -1,7 +1,7 @@
 <?php
 
 // Memasukkan file class-nasabah.php untuk mengakses class Nasabah
-include '../config/class-mahasiswa.php';
+include '../config/class-nasabah.php';
 // Membuat objek dari class Nasabah
 $nasabah = new Nasabah();
 // Mengambil data nasabah dari form input menggunakan metode POST dan menyimpannya dalam array

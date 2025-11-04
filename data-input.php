@@ -2,11 +2,11 @@
 
 include_once 'config/class-master.php';
 $master = new MasterData();
-// Mengambil daftar program studi, provinsi, dan status mahasiswa
+// Mengambil daftar program studi, provinsi, dan status nasabah
 $bankList = $master->getBank();
 // Mengambil daftar provinsi
 $provinsiList = $master->getProvinsi();
-// Mengambil daftar status mahasiswa
+// Mengambil daftar status nasabah
 $statusList = $master->getStatus();
 // Menampilkan alert berdasarkan status yang diterima melalui parameter GET
 if(isset($_GET['status'])){
@@ -68,8 +68,8 @@ if(isset($_GET['status'])){
                                     <form action="proses/proses-input.php" method="POST">
 									    <div class="card-body">
                                             <div class="mb-3">
-                                                <label for="nim" class="form-label">Nomor Rekening Nasabah</label>
-                                                <input type="number" class="form-control" id="nim" name="nim" placeholder="Masukkan Nomor Rekening Nasabah" required>
+                                                <label for="norek" class="form-label">Nomor Rekening Nasabah</label>
+                                                <input type="number" class="form-control" id="norek" name="norek" placeholder="Masukkan Nomor Rekening Nasabah" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="nama" class="form-label">Nama Lengkap</label>

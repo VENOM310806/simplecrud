@@ -1,6 +1,6 @@
 <?php
 
-include_once 'config/class-mahasiswa.php';
+include_once 'config/class-nasabah.php';
 $nasabah = new Nasabah();
 $kataKunci = '';
 // Mengecek apakah parameter GET 'search' ada
@@ -99,8 +99,8 @@ if(isset($_GET['search'])){
 															<th>Jenis Bank</th>
 															<th>Alamat</th>
 															<th>Provinsi</th>
-															<th>Telp</th>
 															<th>Email</th>
+															<th>Telp</th>
 															<th class="text-center">Status</th>
 															<th class="text-center">Aksi</th>
 														</tr>
@@ -124,10 +124,10 @@ if(isset($_GET['search'])){
 															<td>'.$nasabah['norek'].'</td>
 															<td>'.$nasabah['nama'].'</td>
 															<td>'.$nasabah['bank'].'</td>
-															<td>'.$nasabah['provinsi'].'</td>
 															<td>'.$nasabah['alamat'].'</td>
-															<td>'.$nasabah['telp'].'</td>
+															<td>'.$nasabah['provinsi'].'</td>
 															<td>'.$nasabah['email'].'</td>
+															<td>'.$nasabah['telp'].'</td>
 															<td class="text-center">'.$nasabah['status'].'</td>
 															<td class="text-center">
 																<button type="button" class="btn btn-sm btn-warning me-1" onclick="window.location.href=\'data-edit.php?id='.$nasabah['id'].'\'"><i class="bi bi-pencil-fill"></i> Edit</button>

@@ -88,7 +88,7 @@ class MasterData extends Database {
     public function updateBank($data){
         $kodeBank = $data['kode'];
         $namaBank = $data['nama'];
-        $query = "UPDATE tb_jenis_bank SET kode_bank = ? WHERE nm_bank = ?";
+        $query = "UPDATE tb_jenis_bank SET nm_bank = ? WHERE id_bank = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;

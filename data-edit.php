@@ -1,7 +1,7 @@
 <?php 
 
 include_once 'config/class-master.php';
-include_once 'config/class-mahasiswa.php';
+include_once 'config/class-nasabah.php';
 $master = new MasterData();
 $nasabah = new Nasabah();
 // Mengambil daftar jenis_bank, provinsi, dan status nasabah
@@ -69,10 +69,10 @@ if(isset($_GET['status'])){
 									</div>
                                     <form action="proses/proses-edit.php" method="POST">
 									    <div class="card-body">
-                                            <input type="hidden" name="id" value="<?php echo $dataMahasiswa['id']; ?>">
+                                            <input type="hidden" name="norek" value="<?php echo $dataNasabah['id']; ?>">
                                             <div class="mb-3">
-                                                <label for="nim" class="form-label">Nomor Rekening Nasabah</label>
-                                                <input type="number" class="form-control" id="nim" name="nim" placeholder="Masukkan Nomor Rekening" value="<?php echo $dataNasabah['norek']; ?>" required>
+                                                <label for="norek" class="form-label">Nomor Rekening Nasabah</label>
+                                                <input type="number" class="form-control" id="norek" name="norek" placeholder="Masukkan Nomor Rekening" value="<?php echo $dataNasabah['norek']; ?>" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="nama" class="form-label">Nama Lengkap</label>
@@ -88,7 +88,7 @@ if(isset($_GET['status'])){
                                                         // Menginisialisasi variabel kosong untuk menandai opsi yang dipilih
                                                         $selectedBank = "";
                                                         // Mengecek apakah jenis bank saat ini sesuai dengan data nasabah
-                                                        if($dataMahasiswa['bank'] == $prodi['id']){
+                                                        if($dataNasabah['bank'] == $prodi['id']){
                                                             // Jika sesuai, tandai sebagai opsi yang dipilih
                                                             $selectedBank = "selected";
                                                         }
@@ -128,7 +128,7 @@ if(isset($_GET['status'])){
                                             </div>
                                             <div class="mb-3">
                                                 <label for="telp" class="form-label">Nomor Telepon</label>
-                                                <input type="tel" class="form-control" id="telp" name="telp" placeholder="Masukkan Nomor Telpon/HP" value="<?php echo $dataNasabah['telp']; ?>" pattern="[0-9+\-\s()]{6,20}" required>
+                                                <input type="telp" class="form-control" id="telp" name="telp" placeholder="Masukkan Nomor Telpon/HP" value="<?php echo $dataNasabah['telp']; ?>" pattern="[0-9+\-\s()]{6,20}" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="status" class="form-label">Status</label>

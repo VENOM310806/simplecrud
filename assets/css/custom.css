@@ -1,1 +1,41 @@
-/* Taruh CSS Custom Disini */
+/* /* Mengubah warna latar belakang body */
+body {
+  background-color: #f0fbff; /* Warna AliceBlue */
+  color: #333; /* Warna teks abu-abu gelap */
+}
+
+/* Mengubah warna header */
+header {
+  background-color: #7ca7d4; /* Warna Biru */
+  color: white; /* Warna teks putih */
+}
+
+/* Mengubah warna tombol (button) */
+.btn-primary {
+  background-color: #a73728; /* Warna Hijau */
+  color: white;
+  border-color: #28a3a7;
+}
+
+.btn-primary:hover {
+  background-color: #7c2188; /* Warna Hijau lebih gelap saat dihover */
+  border-color: #218838;
+}
+
+/* Mengubah warna link (anchor) */
+a {
+  color: #ff00f2; /* Warna Biru */
+}
+
+a:hover {
+  color: #266862; /* Warna Biru lebih gelap saat dihover */
+}Taruh CSS Custom Disini */
+
+.sidebar-wrapper {
+    background-color: #28a3a7;
+    background-size: cover;
+}
+.app-content-header {
+    background-color:brown;
+    background-size: cover;
+}

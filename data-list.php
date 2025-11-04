@@ -1,6 +1,6 @@
 <?php
 
-include_once 'config/class-mahasiswa.php';
+include_once 'config/class-nasabah.php';
 $nasabah = new Nasabah();
 // Menampilkan alert berdasarkan status yang diterima melalui parameter GET
 if(isset($_GET['status'])){

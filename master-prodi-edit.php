@@ -63,7 +63,7 @@ if(isset($_GET['status'])){
                                     <form action="proses/proses-prodi.php?aksi=updateprodi" method="POST">
 									    <div class="card-body">
                                             <div class="mb-3">
-                                                <label for="nama" class="form-label">Kode Bank</label>
+                                                <label for="kode" class="form-label">Kode Bank</label>
                                                 <input type="text" class="form-control-plaintext" id="kode" name="kode" placeholder="Masukkan Kode Bank" value="<?php echo $dataBank['id']; ?>" required readonly>
                                             </div>
 											<div class="mb-3">

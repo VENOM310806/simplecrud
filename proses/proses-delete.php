@@ -1,7 +1,7 @@
 <?php
 
 // Memasukkan file class-nasabah.php untuk mengakses class Nasabah
-include_once '../config/class-mahasiswa.php';
+include_once '../config/class-nasabah.php';
 // Membuat objek dari class Nasabah
 $nasabah = new Nasabah();
 // Mengambil id nasabah dari parameter GET
